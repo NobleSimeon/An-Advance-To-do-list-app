@@ -1,0 +1,192 @@
+/* Default Stlying */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background: linear-gradient(135deg, #4ab1ff, #2d5cfe);
+  padding: 1em;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+button {
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  font-size: 0.95em;
+  font-family: "Poppins";
+}
+li {
+  list-style: none;
+}
+
+/* Sytling Proper */
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+main {
+  width: 100%;
+  padding: 1em 1.5em;
+  background-color: white;
+  border-radius: 0.5em;
+}
+
+/* .left {
+    max-width: 400px;
+} */
+
+.left label {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+#msg {
+    font-size: .7em;
+    color: red;
+}
+
+textarea {
+  font-family: "Poppins";
+  outline: none;
+  font-size: 1em;
+  width: 100%;
+  padding: 0.5em 1em;
+}
+
+#form {
+  text-align: right;
+  padding: 1em 0;
+  border-bottom: 1px solid #999;
+}
+
+.post-btn,
+.clear-btn {
+  padding: 0.5em 1em;
+  background: linear-gradient(135deg, #4ab1ff, #2d5cfe);
+  border-radius: 0.3em;
+  color: white;
+  margin-top: 0.5em;
+}
+.controls {
+  margin-top: 0.5em;
+}
+
+@media (min-width: 450px) {
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.filters button {
+  margin-right: 1em;
+}
+.filters button.active {
+    color:#2d5cfe;
+}
+
+.right {
+  margin: 1em 0;
+}
+
+.lists {
+  margin: 1em 0;
+  padding: 0;
+}
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1em 0;
+}
+.list.completed p {
+    text-decoration: line-through;
+    opacity: .5;
+}
+.list label {
+    display: flex;
+    align-items: flex-start;
+    flex-basis: 85%;
+}
+.list label *:first-child {
+    margin-right: 1em;
+    accent-color: #2d5cfe;
+}
+p {
+    user-select: none;
+    word-break: break-word;
+}
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important; /* 2 */
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+.settings {
+    position: relative;
+    cursor: pointer;
+}
+.settings.show .task-menu {
+    transform: scale(1);
+}
+
+.task-menu {
+    width: max-content;
+    padding: .5em;
+    position: absolute;
+    background-color: white;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    transform-origin: top right;
+    transform: scale(0);
+    transition: transform ease .3s;
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);
+}
+.task-menu li:first-child  {
+    border-bottom: 1px solid #999;
+}
+.task-menu li * {
+    margin-right: .5em;
+}

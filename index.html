@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <script src="script.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>To do list App</h1>
+    <div class="wrapper">
+      <main>
+        <div class="left">
+          <form id="form">
+            <label for="input">Write your post here</label>
+            <textarea name="" id="input" rows="5"></textarea>
+            <br />
+            <div id="msg"></div>
+            <button type="submit" class="post-btn">Post</button>
+          </form>
+
+          <div class="controls">
+            <div class="filters">
+              <button class="active" id="all">All</button>
+              <button id="pending">Pending</button>
+              <button id="completed">Completed</button>
+            </div>
+            <button class="clear-btn">Clear All</button>
+          </div>
+        </div>
+
+        <div class="right">
+          <h3>Your list here</h3>
+          <ul class="lists">
+          </ul>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
